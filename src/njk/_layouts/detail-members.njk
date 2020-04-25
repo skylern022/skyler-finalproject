@@ -1,0 +1,26 @@
+{% extends '_layouts/base.njk' %}
+
+ <title>{% block page_title %}{{members.name}}{% endblock %}</title>
+ {% block page_description %}Biography for {{members.name}}{% endblock %}
+
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Satisfy&display=swap" rel="stylesheet">
+<article class="container">
+  <div class="row">
+      <div class="col-sm-8">
+      {% block info %}
+        <h1>{{members.name}}</h1>
+        <h5>{{members.instruments}}</h5>
+        <p>{{members.text | safe }}</p>
+      {% endblock %}
+    </div>
+    <div class="col-sm-4">
+      {% block story %}
+        <img src="img/{{members.image}}" alt="{{members.name}}" class="img-fluid">
+        <p class="caption">{{members.name}} </p>
+      {% endblock %}
+    </div>
+  </div>
+</article>
+{% endblock %}
