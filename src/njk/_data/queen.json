@@ -128,5 +128,10 @@
       "year": 1995,
       "image": "Queen_Made_in_Heaven.jpg"
     }
+  ],
+  "billboard": [
+    {
+      "url": "billboard.html"
+    }
   ]
 }
