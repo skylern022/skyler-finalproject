@@ -1,0 +1,21 @@
+{% extends '_layouts/base.njk' %}
+
+ <title>{% block page_title %}Discography{% endblock %}</title>
+ {% block page_description %}A list of Queen's discography{% endblock %}
+
+{% block content %}
+<article class="container">
+ <div class="row">
+      <div class="col-sm-4">
+      {% block info %}
+        <p> Testing </p>
+      {% endblock %}
+    </div>
+     <div class="col-sm-8">
+      {% block story %}
+       <p> Testing </p>
+      {% endblock %}
+    </div>
+  </div>
+</article>
+{% endblock%}
