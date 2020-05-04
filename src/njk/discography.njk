@@ -5,28 +5,26 @@
  {% block page_description %}A list of Queen's discography{% endblock %}
 
 {% block content %}
-<article class="container">
- <div class="row">
-      <div class="col-lg-4 col-sm-2">
-      {% block info%}
-        <h1> Discography </h1>
-        {% for discography in queen.discography %}
-        <h3 class="discography-headline"><a>{{ discography.title }}</a></h3>
-          <p class="discography-year">{{ discography.year }}</p>
-        <hr>
-    {% endfor %}
-      {% endblock %}
+  <article class="containter">
+  {% for discography in queen.discography%}
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/{{discography.image}}" class="card-img" alt="{{discography.title}}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{discography.title}}</h5>
+            <p class="card-text">{{discography.year}}</p>
+            <p class="card-text"><small class="text-muted">Discography</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </article>
+{% endblock %}
 
-    </div>
-     <div class="col-lg-8 col-sm-4">
-      {% block story %}
-        {% for discography in queen.discography %}
-          <img src="img/{{discography.image}}" alt="{{discography.title}}" class="img-fluid">
-        {% endfor %}
-      {% endblock %}
-    </div>
-  </div>
-</article>
-{% endblock%}
+
   
   

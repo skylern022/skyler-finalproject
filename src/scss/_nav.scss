@@ -1,5 +1,14 @@
 /* nav */
 
-.navbar {
+.navbar-custom {
   margin-bottom: 0x;
+  background-color: navy;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: white;
 }
