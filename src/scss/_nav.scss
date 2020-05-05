@@ -5,10 +5,18 @@
   background-color: navy;
 }
 
-.navbar-custom .navbar-brand {
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-brand {
+  color: white;
+}
+.nav-link {
   color: white;
 }
 
-.navbar-custom .navbar-nav .nav-link {
-  color: white;
-}
