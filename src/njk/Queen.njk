@@ -1,0 +1,29 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}Queen{% endblock %}
+
+{% block page_description %}Learn about the legendary band, Queen.{% endblock %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <div class="container">
+    <div class="row">
+      <div class="col" id="index-page">
+        <img src="img/queen-band-wallpaper-thin.jpg" alt="queen" class="img-fluid"> 
+          <h1>Give it up for Queen!</h1>
+            <p>"We do things in a style that is very different to anybody else" ~ Queen</p>
+            <p>Queen formed in 1971, and signed their first contract in 1973 with EMI. Since then they have gone on to become rock royalty, pun intended, with iconic songs such as "Bohemian Rhapsody" and "We Are the Champions."</p>
+            <p> Here you will learn everything you need to know about this legendary band. </p>
+            {% for members in queen.members %}
+                <div class="card members-card" style="width: 16rem;">
+                  <img src="img/{{members.image}}" class="card-img-top" alt="{{members.name}}">
+                  <div class="card-body">
+                    <p class="card-text"><a href={{members.url}}>{{members.name}}</a></p>
+                    <p class="card-text">{{members.instruments}}</p>
+                  </div>
+                </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -8,17 +8,19 @@
 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <article class="container">
       <div class="row">
-          <div class="col-sm-8" id="members-page">
-          {% block info %}
-            <h1>{{members.name}}</h1>
-            <h5>{{members.instruments}}</h5>
-            <p>{{members.text | safe }}</p>
-          {% endblock %}
-        </div>
-        <div class="col-sm-4">
+         <div class="col-lg-4">
           {% block story %}
             <img src="img/{{members.imagebw}}" alt="{{members.name}}" class="img-fluid">
             <p class="caption">{{members.name}} </p>
+          {% endblock %}
+        </div>
+          <div class="col-lg-8" id="members-page">
+          {% block info %}
+            <h1>{{members.name}}</h1>
+            <h5>{{members.instruments}}</h5>
+            <h5>Tenure: {{members.tenure}}</h5>
+            <h5>Hometown: {{members.birthplace}}</h5>
+            <p>{{members.text | safe }}</p>
           {% endblock %}
         </div>
       </div>
